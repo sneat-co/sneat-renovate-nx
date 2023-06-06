@@ -1,0 +1,107 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "packageRules": [
+    {
+      "extends": "monorepo:nrwl",
+      "groupName": "nrwl monorepo - automerge",
+      "automerge": true,
+      "matchUpdateTypes": [
+        "patch"
+      ]
+    },
+    {
+      "extends": "monorepo:nrwl",
+      "groupName": "nrwl monorepo - manual merge",
+      "automerge": false,
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ]
+    },
+    {
+      "groupName": "angular automerge",
+      "extends": [
+        "monorepo:angular",
+        "monorepo:angular-cli",
+        "monorepo:angular-eslint"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true,
+      "automergeType": "pr"
+    },
+    {
+      "groupName": "angular major",
+      "extends": [
+        "monorepo:angular",
+        "monorepo:angular-cli",
+        "monorepo:angular-eslint"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "automerge": false
+    },
+    {
+      "groupName": "ionic native",
+      "extends": [
+        "monorepo:ionic-native"
+      ],
+      "automerge": true
+    },
+    {
+      "matchPackagePatterns": [
+        "eslint",
+        "karma",
+        "jasmine",
+        "jest"
+      ],
+      "automerge": true
+    },
+    {
+      "matchPackagePrefixes": [
+        "@ionic/"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "automerge": false
+    },
+    {
+      "matchPackagePrefixes": [
+        "@ionic/"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "major - automerge",
+      "matchPackagePrefixes": [
+        "@capacitor/",
+        "@types/",
+        "@nxtend/",
+        "@sentry/",
+        "postcss"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "minor - automerge",
+      "automerge": true,
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ]
+    }
+  ]
+}
