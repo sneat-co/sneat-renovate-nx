@@ -7,6 +7,16 @@
   ],
   "packageRules": [
     {
+      "matchPackageNames": [
+        "typescript",
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ]
+      "automerge": false
+    },
+    {
       "extends": "monorepo:nrwl",
       "groupName": "nrwl monorepo - automerge",
       "automerge": true,
