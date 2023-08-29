@@ -8,7 +8,7 @@
   "packageRules": [
     {
       "matchPackageNames": [
-        "typescript",
+        "typescript"
       ],
       "matchUpdateTypes": [
         "major",
