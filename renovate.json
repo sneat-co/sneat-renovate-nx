@@ -3,4 +3,12 @@
   "extends": [
     "config:base"
   ]
+  "packageRules": [
+    {
+      "matchPackagePrefixes": [
+        "@ionic/"
+      ],
+      "groupName": "ionic"
+    }
+  ]
 }
