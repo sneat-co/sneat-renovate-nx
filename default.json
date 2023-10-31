@@ -106,7 +106,7 @@
       "automerge": true
     },
     {
-      "groupName": "minor & patch",
+      "groupName": "minor and patch",
       "automerge": true,
       "matchUpdateTypes": [
         "minor",
