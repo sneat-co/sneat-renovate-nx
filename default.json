@@ -112,6 +112,26 @@
                 "minor",
                 "patch"
             ]
+        },
+        {
+            "groupName": "typescript minor",
+            "matchDepNames": [
+                "typescript"
+            ],
+            "matchUpdateTypes": [
+                "minor"
+            ],
+            "automerge": false
+        },
+        {
+            "groupName": "typescript patch",
+            "matchDepNames": [
+                "typescript"
+            ],
+            "matchUpdateTypes": [
+                "patch"
+            ],
+            "automerge": true
         }
     ]
 }
