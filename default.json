@@ -17,16 +17,26 @@
             "automerge": false
         },
         {
-            "extends": "monorepo:nrwl",
+            "groupName": "typescript patch - automerge",
+            "matchPackageNames": [
+                "typescript"
+            ],
+            "matchUpdateTypes": [
+                "patch"
+            ],
+            "automerge": true
+        },
+        {
             "groupName": "nrwl monorepo - automerge",
+            "extends": "monorepo:nrwl",
             "automerge": true,
             "matchUpdateTypes": [
                 "patch"
             ]
         },
         {
-            "extends": "monorepo:nrwl",
             "groupName": "nrwl monorepo - manual merge",
+            "extends": "monorepo:nrwl",
             "automerge": false,
             "matchUpdateTypes": [
                 "major",
@@ -34,14 +44,11 @@
             ]
         },
         {
-            "groupName": "angular automerge",
+            "groupName": "angular - automerge",
             "extends": [
                 "monorepo:angular",
                 "monorepo:angular-cli",
                 "monorepo:angular-eslint"
-            ],
-            "matchPackageNames": [
-                "ng-packagr"
             ],
             "matchUpdateTypes": [
                 "minor",
@@ -57,22 +64,20 @@
                 "monorepo:angular-cli",
                 "monorepo:angular-eslint"
             ],
-            "matchPackageNames": [
-                "ng-packagr"
-            ],
             "matchUpdateTypes": [
                 "major"
             ],
             "automerge": false
         },
         {
-            "groupName": "ionic native",
+            "groupName": "ionic native - automerge",
             "extends": [
                 "monorepo:ionic-native"
             ],
             "automerge": true
         },
         {
+            "groupName": "testing dev deps - automerge",
             "matchPackagePatterns": [
                 "eslint",
                 "karma",
@@ -82,6 +87,7 @@
             "automerge": true
         },
         {
+            "groupName": "ionic",
             "matchPackagePrefixes": [
                 "@ionic/"
             ],
@@ -91,6 +97,7 @@
             "automerge": false
         },
         {
+            "groupName": "ionic - automerge",
             "matchPackagePrefixes": [
                 "@ionic/"
             ],
@@ -112,7 +119,7 @@
             "automerge": true
         },
         {
-            "groupName": "minor and patch",
+            "groupName": "minor and patch - automerge",
             "automerge": true,
             "matchUpdateTypes": [
                 "minor",
@@ -128,16 +135,6 @@
                 "minor"
             ],
             "automerge": false
-        },
-        {
-            "groupName": "typescript patch",
-            "matchDepNames": [
-                "typescript"
-            ],
-            "matchUpdateTypes": [
-                "patch"
-            ],
-            "automerge": true
         }
     ]
 }
