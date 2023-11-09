@@ -77,13 +77,22 @@
             "automerge": true
         },
         {
-            "groupName": "testing dev deps - automerge",
+            "groupName": "lint - automerge",
             "matchPackagePatterns": [
-                "eslint",
+                "eslint"
+            ],
+            "excludePackagePrefixes": ["@angular", "@nx"],
+            "automerge": true
+        },
+        {
+            "groupName": "test tools - automerge",
+            "matchPackagePatterns": [
                 "karma",
                 "jasmine",
-                "jest"
+                "jest",
+                "cypress"
             ],
+            "excludePackagePrefixes": ["@angular", "@nx", "eslint"],
             "automerge": true
         },
         {
