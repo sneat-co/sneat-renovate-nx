@@ -143,6 +143,7 @@
             "matchUpdateTypes": [
                 "minor"
             ],
+            "excludePackagePrefixes": ["@angular", "@nx"],
             "automerge": false
         }
     ]
