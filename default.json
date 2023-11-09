@@ -143,7 +143,15 @@
                 "minor",
                 "patch"
             ],
-            "excludePackagePrefixes": ["@angular", "@nx"],
+            "excludePackageNames": ["typescript"],
+            "excludePackagePrefixes": ["@angular", "@nx", "@ionic"],
+            "excludePackagePatterns": [
+                "eslint",
+                "karma",
+                "jasmine",
+                "jest",
+                "cypress"
+            ],
             "automerge": true
         }
     ]
