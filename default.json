@@ -128,14 +128,6 @@
             "automerge": true
         },
         {
-            "groupName": "minor and patch - automerge",
-            "automerge": true,
-            "matchUpdateTypes": [
-                "minor",
-                "patch"
-            ]
-        },
-        {
             "groupName": "typescript minor",
             "matchDepNames": [
                 "typescript"
@@ -143,8 +135,16 @@
             "matchUpdateTypes": [
                 "minor"
             ],
-            "excludePackagePrefixes": ["@angular", "@nx"],
             "automerge": false
+        },
+        {
+            "groupName": "minor and patch - automerge",
+            "matchUpdateTypes": [
+                "minor",
+                "patch"
+            ]
+            "excludePackagePrefixes": ["@angular", "@nx"],
+            "automerge": true
         }
     ]
 }
