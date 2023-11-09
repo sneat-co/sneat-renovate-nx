@@ -40,6 +40,9 @@
                 "monorepo:angular-cli",
                 "monorepo:angular-eslint"
             ],
+            "matchPackageNames": [
+                "ng-packagr"
+            ],
             "matchUpdateTypes": [
                 "minor",
                 "patch"
@@ -53,6 +56,9 @@
                 "monorepo:angular",
                 "monorepo:angular-cli",
                 "monorepo:angular-eslint"
+            ],
+            "matchPackageNames": [
+                "ng-packagr"
             ],
             "matchUpdateTypes": [
                 "major"
