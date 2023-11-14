@@ -27,8 +27,11 @@
             "automerge": true
         },
         {
-            "groupName": "nrwl monorepo - automerge",
+            "groupName": "nx + nrwl monorepo - automerge",
             "extends": "monorepo:nrwl",
+            "matchPackageNames": [
+                "nx"
+            ],
             "automerge": true,
             "matchUpdateTypes": [
                 "patch"
