@@ -146,7 +146,7 @@
                 "minor",
                 "patch"
             ],
-            "excludePackageNames": ["typescript"],
+            "excludePackageNames": ["typescript", "nx"],
             "excludePackagePrefixes": ["@angular", "@nx", "@ionic"],
             "excludePackagePatterns": [
                 "eslint",
