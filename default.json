@@ -53,6 +53,9 @@
                 "monorepo:angular-cli",
                 "monorepo:angular-eslint"
             ],
+            "matchPackageNames": [
+                "@schematics/angular"
+            ],
             "matchUpdateTypes": [
                 "minor",
                 "patch"
