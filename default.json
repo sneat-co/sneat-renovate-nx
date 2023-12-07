@@ -120,6 +120,17 @@
             "automerge": true
         },
         {
+            "groupName": "sentry - automerge",
+            "matchPackagePrefixes": [
+                "@sentry/"
+            ],
+            "matchUpdateTypes": [
+                "minor",
+                "patch"
+            ],
+            "automerge": true
+        },
+        {
             "groupName": "major - automerge",
             "matchPackagePrefixes": [
                 "@capacitor/",
