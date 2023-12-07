@@ -127,19 +127,32 @@
             "matchPackagePrefixes": [
                 "@sentry/"
             ],
-            "matchUpdateTypes": [
-                "minor",
-                "patch"
+            "automerge": true
+        },
+        {
+            "groupName": "@types - automerge",
+            "matchPackagePrefixes": [
+                "@types/",
             ],
             "automerge": true
         },
         {
-            "groupName": "major - automerge",
+            "groupName": "@capacitor - automerge",
             "matchPackagePrefixes": [
                 "@capacitor/",
-                "@types/",
+            ],
+            "automerge": true
+        },
+        {
+            "groupName": "@nxtend - automerge",
+            "matchPackagePrefixes": [
                 "@nxtend/",
-                "@sentry/",
+            ],
+            "automerge": true
+        },
+        {
+            "groupName": "postcss - automerge",
+            "matchPackagePrefixes": [
                 "postcss"
             ],
             "automerge": true
