@@ -102,6 +102,13 @@
             "automerge": true
         },
         {
+            "groupName": "firebase",
+            "matchPackageNames": [
+                "firebase"
+            ],
+            "automerge": true
+        },
+        {
             "groupName": "ionic",
             "matchPackagePrefixes": [
                 "@ionic/"
