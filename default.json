@@ -95,6 +95,11 @@
                 "jest",
                 "cypress"
             ],
+            "matchUpdateTypes": [
+                "major",
+                "minor",
+                "patch"
+            ],
             "excludePackagePrefixes": ["@angular", "@nx", "eslint"],
             "automerge": true
         },
@@ -102,6 +107,11 @@
             "groupName": "firebase",
             "matchPackageNames": [
                 "firebase"
+            ],
+            "matchUpdateTypes": [
+                "major",
+                "minor",
+                "patch"
             ],
             "automerge": true
         },
@@ -131,12 +141,22 @@
             "matchPackagePrefixes": [
                 "@sentry/"
             ],
+            "matchUpdateTypes": [
+                "major",
+                "minor",
+                "patch"
+            ],
             "automerge": true
         },
         {
             "groupName": "@types - automerge",
             "matchPackagePrefixes": [
                 "@types/",
+            ],
+            "matchUpdateTypes": [
+                "major",
+                "minor",
+                "patch"
             ],
             "automerge": true
         },
@@ -145,12 +165,22 @@
             "matchPackagePrefixes": [
                 "@capacitor/",
             ],
+            "matchUpdateTypes": [
+                "major",
+                "minor",
+                "patch"
+            ],
             "automerge": true
         },
         {
             "groupName": "@nxtend - automerge",
             "matchPackagePrefixes": [
                 "@nxtend/",
+            ],
+            "matchUpdateTypes": [
+                "major",
+                "minor",
+                "patch"
             ],
             "automerge": true
         },
@@ -159,17 +189,33 @@
             "matchPackagePrefixes": [
                 "postcss"
             ],
+            "matchUpdateTypes": [
+                "major",
+                "minor",
+                "patch"
+            ],
             "automerge": true
         },
         {
-            "groupName": "typescript minor",
+            "groupName": "typescript",
             "matchDepNames": [
                 "typescript"
             ],
             "matchUpdateTypes": [
+                "major",
                 "minor"
             ],
             "automerge": false
+        },
+        {
+            "groupName": "typescript - patch",
+            "matchDepNames": [
+                "typescript"
+            ],
+            "matchUpdateTypes": [
+                "patch",
+            ],
+            "automerge": true
         },
         {
             "groupName": "minor and patch - automerge",
@@ -177,7 +223,7 @@
                 "minor",
                 "patch"
             ],
-            "excludePackageNames": ["typescript", "nx"],
+            "excludePackageNames": ["typescript", "nx", "firebase"],
             "excludePackagePrefixes": ["@angular", "@nx", "@ionic"],
             "excludePackagePatterns": [
                 "eslint",
