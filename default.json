@@ -106,7 +106,7 @@
         {
             "groupName": "firebase",
             "matchPackageNames": [
-                "firebase",
+                "firebase"
             ],
             "matchPackagePrefixes": [
                 "@firebase/"
