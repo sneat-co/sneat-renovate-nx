@@ -106,7 +106,10 @@
         {
             "groupName": "firebase",
             "matchPackageNames": [
-                "firebase"
+                "firebase",
+            ],
+            "matchPackagePrefixes": [
+                "@firebase/"
             ],
             "matchUpdateTypes": [
                 "major",
@@ -224,7 +227,7 @@
                 "patch"
             ],
             "excludePackageNames": ["typescript", "nx", "firebase"],
-            "excludePackagePrefixes": ["@angular", "@nx", "@ionic"],
+            "excludePackagePrefixes": ["@angular", "@nx", "@ionic", "@firebase/"],
             "excludePackagePatterns": [
                 "eslint",
                 "karma",
