@@ -53,6 +53,10 @@
             "matchPackageNames": [
                 "@schematics/angular"
             ],
+            "matchPackagePrefixes": [
+                "@angular/",
+                "@angular-devkit/"
+            ],
             "matchUpdateTypes": [
                 "minor",
                 "patch"
@@ -66,6 +70,13 @@
                 "monorepo:angular",
                 "monorepo:angular-cli",
                 "monorepo:angular-eslint"
+            ],
+            "matchPackageNames": [
+                "@schematics/angular"
+            ],
+            "matchPackagePrefixes": [
+                "@angular/",
+                "@angular-devkit/"
             ],
             "matchUpdateTypes": [
                 "major"
