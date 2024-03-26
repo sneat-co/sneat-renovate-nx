@@ -237,7 +237,7 @@
                 "minor",
                 "patch"
             ],
-            "excludePackageNames": ["typescript", "nx", "firebase"],
+            "excludePackageNames": ["typescript", "nx", "firebase", "@schematics/angular"],
             "excludePackagePrefixes": ["@angular", "@nx", "@ionic", "@firebase/"],
             "excludePackagePatterns": [
                 "eslint",
