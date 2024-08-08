@@ -238,7 +238,7 @@
                 "patch"
             ],
             "excludePackageNames": ["typescript", "nx", "firebase", "@schematics/angular"],
-            "excludePackagePrefixes": ["@angular", "@nx", "@ionic", "@firebase/"],
+            "excludePackagePrefixes": ["@angular", "@angular-devkit", "@nx", "@ionic", "@firebase/"],
             "excludePackagePatterns": [
                 "eslint",
                 "karma",
