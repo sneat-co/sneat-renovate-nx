@@ -51,7 +51,8 @@
                 "monorepo:angular-eslint"
             ],
             "matchPackageNames": [
-                "@schematics/angular"
+                "@schematics/angular",
+                "ng-packagr"
             ],
             "matchPackagePrefixes": [
                 "@angular/",
@@ -86,7 +87,7 @@
         },
         {
             "groupName": "ionic native - automerge",
-            "extends": [
+            "extends"se: [
                 "monorepo:ionic-native"
             ],
             "automerge": true
