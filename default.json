@@ -87,7 +87,7 @@
         },
         {
             "groupName": "ionic native - automerge",
-            "extends"se: [
+            "extends": [
                 "monorepo:ionic-native"
             ],
             "automerge": true
