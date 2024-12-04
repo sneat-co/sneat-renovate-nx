@@ -76,7 +76,8 @@
             ],
             "matchPackagePrefixes": [
                 "@angular/",
-                "@angular-devkit/"
+                "@angular-devkit/",
+                "@angular-eslint/"
             ],
             "matchUpdateTypes": [
                 "major"
@@ -95,7 +96,7 @@
             "matchPackagePatterns": [
                 "eslint"
             ],
-            "excludePackagePrefixes": ["@angular", "@nx"],
+            "excludePackagePrefixes": ["@angular", "@nx", "@angular-eslint"],
             "automerge": true
         },
         {
