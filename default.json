@@ -230,7 +230,7 @@
                 "typescript"
             ],
             "matchUpdateTypes": [
-                "patch",
+                "patch"
             ],
             "automerge": true
         },
