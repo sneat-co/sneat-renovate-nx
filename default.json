@@ -53,7 +53,7 @@
             "matchPackageNames": [
                 "@angular/*",
                 "@angular-devkit/*",
-                "@angular-eslint/*"
+                "@angular-eslint/*",
                 "@schematics/angular",
                 "ng-packagr"
             ],
@@ -74,7 +74,7 @@
             "matchPackageNames": [
                 "@angular/*",
                 "@angular-devkit/*",
-                "@angular-eslint/*"
+                "@angular-eslint/*",
                 "@schematics/angular",
                 "ng-packagr"
             ],
