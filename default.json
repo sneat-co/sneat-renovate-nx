@@ -51,13 +51,11 @@
                 "monorepo:angular-eslint"
             ],
             "matchPackageNames": [
+                "@angular/*",
+                "@angular-devkit/*",
+                "@angular-eslint/*"
                 "@schematics/angular",
                 "ng-packagr"
-            ],
-            "matchPackagePrefixes": [
-                "@angular/",
-                "@angular-devkit/",
-                "@angular-eslint/"
             ],
             "matchUpdateTypes": [
                 "minor",
@@ -74,13 +72,11 @@
                 "monorepo:angular-eslint"
             ],
             "matchPackageNames": [
+                "@angular/*",
+                "@angular-devkit/*",
+                "@angular-eslint/*"
                 "@schematics/angular",
                 "ng-packagr"
-            ],
-            "matchPackagePrefixes": [
-                "@angular/",
-                "@angular-devkit/",
-                "@angular-eslint/"
             ],
             "matchUpdateTypes": [
                 "major"
