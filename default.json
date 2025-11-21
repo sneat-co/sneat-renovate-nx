@@ -1,252 +1,270 @@
 {
-    "extends": [
-        "config:recommended"
-    ],
-    "labels": [
-        "dependencies"
-    ],
-    "packageRules": [
-        {
-            "matchPackageNames": [
-                "typescript"
-            ],
-            "matchUpdateTypes": [
-                "major",
-                "minor"
-            ],
-            "automerge": false
-        },
-        {
-            "groupName": "typescript patch - automerge",
-            "matchPackageNames": [
-                "typescript"
-            ],
-            "matchUpdateTypes": [
-                "patch"
-            ],
-            "automerge": true
-        },
-        {
-            "groupName": "nx + nrwl monorepo - automerge",
-            "extends": "monorepo:nrwl",
-            "automerge": true,
-            "matchUpdateTypes": [
-                "patch"
-            ]
-        },
-        {
-            "groupName": "nrwl monorepo - manual merge",
-            "extends": "monorepo:nrwl",
-            "automerge": false,
-            "matchUpdateTypes": [
-                "major",
-                "minor"
-            ]
-        },
-        {
-            "groupName": "angular - automerge",
-            "extends": [
-                "monorepo:angular",
-                "monorepo:angular-cli",
-                "monorepo:angular-eslint"
-            ],
-            "matchPackageNames": [
-                "@angular/*",
-                "@angular-devkit/*",
-                "@angular-eslint/*",
-                "@schematics/angular",
-                "ng-packagr"
-            ],
-            "matchUpdateTypes": [
-                "minor",
-                "patch"
-            ],
-            "automerge": true,
-            "automergeType": "pr"
-        },
-        {
-            "groupName": "angular major",
-            "extends": [
-                "monorepo:angular",
-                "monorepo:angular-cli",
-                "monorepo:angular-eslint"
-            ],
-            "matchPackageNames": [
-                "@angular/*",
-                "@angular-devkit/*",
-                "@angular-eslint/*",
-                "@schematics/angular",
-                "ng-packagr"
-            ],
-            "matchUpdateTypes": [
-                "major"
-            ],
-            "automerge": false
-        },
-        {
-            "groupName": "ionic native - automerge",
-            "extends": [
-                "monorepo:ionic-native"
-            ],
-            "automerge": true
-        },
-        {
-            "groupName": "lint - automerge",
-            "matchPackagePatterns": [
-                "eslint"
-            ],
-            "excludePackagePrefixes": ["@angular", "@nx"],
-            "automerge": true
-        },
-        {
-            "groupName": "test tools - automerge",
-            "matchPackagePatterns": [
-                "karma",
-                "jasmine",
-                "jest",
-                "cypress"
-            ],
-            "matchUpdateTypes": [
-                "major",
-                "minor",
-                "patch"
-            ],
-            "excludePackagePrefixes": ["@angular", "@nx", "eslint"],
-            "automerge": true
-        },
-        {
-            "groupName": "firebase",
-            "matchPackageNames": [
-                "firebase"
-            ],
-            "matchPackagePrefixes": [
-                "@firebase/"
-            ],
-            "matchUpdateTypes": [
-                "major",
-                "minor",
-                "patch"
-            ],
-            "automerge": true
-        },
-        {
-            "groupName": "ionic",
-            "matchPackagePrefixes": [
-                "@ionic/"
-            ],
-            "matchUpdateTypes": [
-                "major"
-            ],
-            "automerge": false
-        },
-        {
-            "groupName": "ionic - automerge",
-            "matchPackagePrefixes": [
-                "@ionic/"
-            ],
-            "matchUpdateTypes": [
-                "minor",
-                "patch"
-            ],
-            "automerge": true
-        },
-        {
-            "groupName": "sentry - automerge",
-            "matchPackagePrefixes": [
-                "@sentry/"
-            ],
-            "matchUpdateTypes": [
-                "major",
-                "minor",
-                "patch"
-            ],
-            "automerge": true
-        },
-        {
-            "groupName": "@types - automerge",
-            "matchPackagePrefixes": [
-                "@types/",
-            ],
-            "matchUpdateTypes": [
-                "major",
-                "minor",
-                "patch"
-            ],
-            "automerge": true
-        },
-        {
-            "groupName": "@capacitor - automerge",
-            "matchPackagePrefixes": [
-                "@capacitor/",
-            ],
-            "matchUpdateTypes": [
-                "major",
-                "minor",
-                "patch"
-            ],
-            "automerge": true
-        },
-        {
-            "groupName": "@nxtend - automerge",
-            "matchPackagePrefixes": [
-                "@nxtend/",
-            ],
-            "matchUpdateTypes": [
-                "major",
-                "minor",
-                "patch"
-            ],
-            "automerge": true
-        },
-        {
-            "groupName": "postcss - automerge",
-            "matchPackagePrefixes": [
-                "postcss"
-            ],
-            "matchUpdateTypes": [
-                "major",
-                "minor",
-                "patch"
-            ],
-            "automerge": true
-        },
-        {
-            "groupName": "typescript",
-            "matchDepNames": [
-                "typescript"
-            ],
-            "matchUpdateTypes": [
-                "major",
-                "minor"
-            ],
-            "automerge": false
-        },
-        {
-            "groupName": "typescript - patch",
-            "matchDepNames": [
-                "typescript"
-            ],
-            "matchUpdateTypes": [
-                "patch"
-            ],
-            "automerge": true
-        },
-        {
-            "groupName": "minor and patch - automerge",
-            "matchUpdateTypes": [
-                "minor",
-                "patch"
-            ],
-            "excludePackageNames": ["typescript", "nx", "firebase", "@schematics/angular"],
-            "excludePackagePrefixes": ["@angular", "@angular-devkit", "@nx", "@ionic", "@firebase/"],
-            "excludePackagePatterns": [
-                "eslint",
-                "karma",
-                "jasmine",
-                "jest",
-                "cypress"
-            ],
-            "automerge": true
-        }
-    ]
+  "extends": [
+    "config:recommended"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": [
+        "typescript"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ],
+      "automerge": false
+    },
+    {
+      "groupName": "typescript patch - automerge",
+      "matchPackageNames": [
+        "typescript"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "nx + nrwl monorepo - automerge",
+      "extends": "monorepo:nrwl",
+      "automerge": true,
+      "matchUpdateTypes": [
+        "patch"
+      ]
+    },
+    {
+      "groupName": "nrwl monorepo - manual merge",
+      "extends": "monorepo:nrwl",
+      "automerge": false,
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ]
+    },
+    {
+      "groupName": "angular - automerge",
+      "extends": [
+        "monorepo:angular",
+        "monorepo:angular-cli",
+        "monorepo:angular-eslint"
+      ],
+      "matchPackageNames": [
+        "@angular/*",
+        "@angular-devkit/*",
+        "@angular-eslint/*",
+        "@schematics/angular",
+        "ng-packagr"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true,
+      "automergeType": "pr"
+    },
+    {
+      "groupName": "angular major",
+      "extends": [
+        "monorepo:angular",
+        "monorepo:angular-cli",
+        "monorepo:angular-eslint"
+      ],
+      "matchPackageNames": [
+        "@angular/*",
+        "@angular-devkit/*",
+        "@angular-eslint/*",
+        "@schematics/angular",
+        "ng-packagr"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "automerge": false
+    },
+    {
+      "groupName": "ionic native - automerge",
+      "extends": [
+        "monorepo:ionic-native"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "lint - automerge",
+      "matchPackagePatterns": [
+        "eslint"
+      ],
+      "excludePackagePrefixes": [
+        "@angular",
+        "@nx"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "test tools - automerge",
+      "matchPackagePatterns": [
+        "karma",
+        "jasmine",
+        "jest",
+        "cypress"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ],
+      "excludePackagePrefixes": [
+        "@angular",
+        "@nx",
+        "eslint"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "firebase",
+      "matchPackageNames": [
+        "firebase"
+      ],
+      "matchPackagePrefixes": [
+        "@firebase/"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "ionic",
+      "matchPackagePrefixes": [
+        "@ionic/"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "automerge": false
+    },
+    {
+      "groupName": "ionic - automerge",
+      "matchPackagePrefixes": [
+        "@ionic/"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "sentry - automerge",
+      "matchPackagePrefixes": [
+        "@sentry/"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "@types - automerge",
+      "matchPackagePrefixes": [
+        "@types/"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "@capacitor - automerge",
+      "matchPackagePrefixes": [
+        "@capacitor/"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "@nxtend - automerge",
+      "matchPackagePrefixes": [
+        "@nxtend/"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "postcss - automerge",
+      "matchPackagePrefixes": [
+        "postcss"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "typescript",
+      "matchDepNames": [
+        "typescript"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ],
+      "automerge": false
+    },
+    {
+      "groupName": "typescript - patch",
+      "matchDepNames": [
+        "typescript"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "minor and patch - automerge",
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "excludePackageNames": [
+        "typescript",
+        "nx",
+        "firebase",
+        "@schematics/angular"
+      ],
+      "excludePackagePrefixes": [
+        "@angular",
+        "@angular-devkit",
+        "@nx",
+        "@ionic",
+        "@firebase/"
+      ],
+      "excludePackagePatterns": [
+        "eslint",
+        "karma",
+        "jasmine",
+        "jest",
+        "cypress"
+      ],
+      "automerge": true
+    }
+  ]
 }
