@@ -257,7 +257,8 @@
         "@angular-devkit",
         "@nx",
         "@ionic",
-        "@firebase/"
+        "@firebase/",
+        "@sneat/"
       ],
       "excludePackagePatterns": [
         "eslint",
@@ -267,6 +268,27 @@
         "cypress"
       ],
       "automerge": true
+    },
+    {
+      "groupName": "@sneat internal - automerge",
+      "matchPackagePrefixes": [
+        "@sneat/"
+      ],
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "automerge": true
+    },
+    {
+      "groupName": "@sneat internal - manual merge",
+      "matchPackagePrefixes": [
+        "@sneat/"
+      ],
+      "matchUpdateTypes": [
+        "major",
+        "minor"
+      ],
+      "automerge": false
     }
   ]
 }
