@@ -5,6 +5,18 @@
   "labels": [
     "dependencies"
   ],
+  "env": {
+    "GOPRIVATE": "github.com/sneat-co/*",
+    "GONOPROXY": "github.com/sneat-co/*",
+    "GONOSUMDB": "github.com/sneat-co/*"
+  },
+  "hostRules": [
+    {
+      "matchHost": "https://github.com/sneat-co",
+      "hostType": "go",
+      "token": "{{ secrets.RENOVATE_GITHUB_COM_TOKEN }}"
+    }
+  ],
   "minimumReleaseAge": "3 days",
   "internalChecksFilter": "strict",
   "packageRules": [
